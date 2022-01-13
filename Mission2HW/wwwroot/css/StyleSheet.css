@@ -1,0 +1,17 @@
+﻿img {
+    width: 400px;
+    height: 600px;
+}
+
+
+body {
+    font-family: Garamond;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+header {
+    font-family: Garamond;
+}
