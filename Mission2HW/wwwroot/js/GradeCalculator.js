@@ -1,14 +1,11 @@
-﻿$('#btnsend').click(function () {
+﻿$('#calculator').click(function () {
 
-    /*for some reason I couldn't get this function to work properly and actually show the grade. I couldn't tell if it had to
-    do with my calculations or with the if statement or the way I set up the button and I ran out of time trying to figure it out.
-    Ideally this would have printed out the final number and letter grade when you click the button on the GradeCalculator.cshtml page*/
 
-    let finalgrade = ($('#assignments').val()/100 * 55) +
+    let finalgrade = Math.round(($('#assignments').val()/100 * 55) +
         ($('#groupproject').val()/100 * 5) +
-        ($('#groupproject').val()/100 * 10) +
-        ($('#quizzes').val()/100 * 20) +
-        ($('#intex').val() / 100 * 10)
+        ($('#quizzes').val()/100 * 10) +
+        ($('#exams').val()/100 * 20) +
+        ($('#intex').val() / 100 * 10))
 
     let finlettergrade = ''
 
@@ -38,9 +35,7 @@
         finlettergrade = 'E'
     }
 
-    alert('Final Grade: ' + finalgrade + '<br />' + 'Letter Grade: ' + finlettergrade)
-
-
-
+    alert('Final Grade: ' + finalgrade + ' Final Letter Grade: ' + finlettergrade)
     
 })
+
